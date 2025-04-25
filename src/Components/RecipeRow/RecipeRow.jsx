@@ -7,7 +7,7 @@ export default function RecipeRow() {
     <>
       <div className="flex items-start justify-center flex-wrap">
         {data?.map((recipe) => (
-          <RecipeCard recipe={recipe} />
+          <RecipeCard recipe={recipe} key={recipe.id}/>
         ))}
       </div>
     </>
