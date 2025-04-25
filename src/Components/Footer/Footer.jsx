@@ -1,3 +1,4 @@
+import LogoImage from "../../assets/sandwich_11188179.gif"
 export default function Footer() {
     return (
       <>
@@ -7,12 +8,12 @@ export default function Footer() {
               <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com/" className="flex items-center">
                   <img
-                    src="https://flowbite.com/docs/images/logo.svg"
-                    className="h-8 me-3"
+                    src={LogoImage}
+                    className="h-8 me-3 rounded-full"
                     alt="FlowBite Logo"
                   />
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                    Flowbite
+                    YumAuth
                   </span>
                 </a>
               </div>
@@ -23,7 +24,10 @@ export default function Footer() {
                   </h2>
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                     <li className="mb-4">
-                      <a href="https://flowbite.com/" className="hover:underline">
+                      <a
+                        href="https://flowbite.com/"
+                        className="hover:underline"
+                      >
                         Flowbite
                       </a>
                     </li>

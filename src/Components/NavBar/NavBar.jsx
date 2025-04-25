@@ -1,5 +1,5 @@
 import React from "react";
-
+import LogoImage from "../../assets/sandwich_11188179.gif"
 export default function NavBar() {
   return (
     <>
@@ -10,12 +10,12 @@ export default function NavBar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
+                    src={LogoImage}
+                    className="h-8 me-3 rounded-full"
+                    alt="FlowBite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">
-              Flowbite
+              YumAuth
             </span>
           </a>
           <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
