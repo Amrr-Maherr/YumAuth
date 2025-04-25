@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LogoImage from "../../assets/sandwich_11188179.gif";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,52 +55,45 @@ export default function NavBar() {
               </svg>
             </button>
           </div>
-
-          {/* Main Menu for Desktop */}
           <div
             className={`items-center justify-between hidden w-full md:flex md:w-auto md:order-1`}
             id="navbar-user"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+            <ul className="flex items-center flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-blue-700 md:p-0 rounded-sm"
-                >
+                <NavLink to="/" className="block py-2 px-3 text-blue-700">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink to="/Search" className="block py-2 px-3 text-gray-900">
+                  Search
+                </NavLink>
+              </li>
+              {/* Authentication Links */}
+              <li>
+                <NavLink
+                  to="/login"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
-                  About
-                </a>
+                  Login
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink
+                  to="/register"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >
-                  Services
-                </a>
+                  Register
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
+                <NavLink
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  onClick={() => alert("Logging out...")}
                 >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >
-                  Contact
-                </a>
+                  Logout
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -112,29 +106,38 @@ export default function NavBar() {
           >
             <ul className="flex flex-col font-medium p-4 mt-4 rounded-lg space-y-4">
               <li>
-                <a href="#" className="block py-2 px-3 text-blue-700">
+                <NavLink to="/" className="block py-2 px-3 text-blue-700">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900">
-                  About
-                </a>
+                <NavLink to="/Search" className="block py-2 px-3 text-gray-900">
+                  Search
+                </NavLink>
+              </li>
+              {/* Mobile Authentication Links */}
+              <li>
+                <NavLink
+                  to="/login"
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >
+                  Login
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900">
-                  Services
-                </a>
+                <NavLink
+                  to="/register"
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >
+                  Register
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 text-gray-900">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block py-2 px-3 text-gray-900">
-                  Contact
-                </a>
+                <NavLink
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >
+                  Logout
+                </NavLink>
               </li>
             </ul>
           </div>
