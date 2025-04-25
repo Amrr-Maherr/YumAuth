@@ -42,14 +42,14 @@ export default function NotFound() {
                 fill="url(#paint1_linear_282_515)"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M83.5 3.5C83.5 1.567 85.067 0 87 0H406C407.933 0 409.5 1.567 409.5 3.5V200.5H406.5V3.5C406.5 3.22387 406.276 3 406 3H87C86.7239 3 86.5 3.22386 86.5 3.5V200.5H83.5V3.5Z"
                 fill="#111928"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M83.5 3.5C83.5 1.567 85.067 0 87 0H406C407.933 0 409.5 1.567 409.5 3.5V200.5H406.5V3.5C406.5 3.22387 406.276 3 406 3H87C86.7239 3 86.5 3.22386 86.5 3.5V200.5H83.5V3.5Z"
                 fill="url(#paint2_linear_282_515)"
               />
