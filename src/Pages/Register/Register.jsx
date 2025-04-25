@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
+import Avatar from "../../Components/FormAvatar/Avatar";
 
 export default function Register() {
   return (
     <>
       <section className="bg-white">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div className="flex items-center justify-around px-6 py-10 mx-auto ">
           <div className="w-full rounded-lg shadow-lg bg-white/30 backdrop-blur-md border border-white/40 md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
@@ -98,8 +100,10 @@ export default function Register() {
               </form>
             </div>
           </div>
+          <Avatar/>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
