@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [userInfo,setUserInfo] = useState(JSON.parse(localStorage.getItem("userInfo")) || null)
   return (
     <>
       <nav className="border-b border-white/40 bg-white/30 backdrop-blur-md sticky top-0 z-50 shadow-sm">
@@ -71,30 +71,35 @@ export default function NavBar() {
                 </NavLink>
               </li>
               {/* Authentication Links */}
-              <li>
-                <NavLink
-                  to="/login"
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >
-                  Login
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/register"
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >
-                  Register
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                  onClick={() => alert("Logging out...")}
-                >
-                  Logout
-                </NavLink>
-              </li>
+              {userInfo ? (
+                <li>
+                  <NavLink
+                    className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                    onClick={() => alert("Logging out...")}
+                  >
+                    Logout
+                  </NavLink>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <NavLink
+                      to="/login"
+                      className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                    >
+                      Login
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/register"
+                      className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                    >
+                      Register
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
@@ -133,9 +138,7 @@ export default function NavBar() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >
+                <NavLink className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100/50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
                   Logout
                 </NavLink>
               </li>
