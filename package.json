@@ -20,6 +20,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.2",
+    "react-use-online-offline": "^1.0.9",
     "tailwindcss": "^3.3.5",
     "yup": "^1.6.1"
   },
