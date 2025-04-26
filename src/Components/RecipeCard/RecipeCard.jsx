@@ -1,4 +1,7 @@
+import { Link, useNavigate } from "react-router-dom";
+
 export default function RecipeCard({ recipe }) {
+  const Nav = useNavigate()
   return (
     <div className="rounded-lg w-[400px] overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-all duration-300 ease-in-out my-3 mx-auto">
       <img
@@ -28,7 +31,7 @@ export default function RecipeCard({ recipe }) {
           <span className="font-semibold">Servings:</span>
           <span className="ml-2">{recipe.servings}</span>
         </div>
-        <button className="mt-4 w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
+        <button onClick={()=>{Nav(`/details/${recipe.id}`);}} className="mt-4 w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
           Show Details
         </button>
       </div>
