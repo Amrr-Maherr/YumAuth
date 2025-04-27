@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-5 relative">
-        <div className="grid gap-4">
+        <div className="grid gap-4 hidden md:grid">
           <div>
             <img
               className="h-auto max-w-full rounded-lg object-cover"
@@ -27,7 +27,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
-        <div className="grid gap-4">
+        <div className="grid gap-4 hidden md:grid">
           <div>
             <img
               className="h-auto max-w-full rounded-lg object-cover"
