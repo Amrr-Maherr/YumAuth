@@ -66,7 +66,7 @@ export default function NavBar() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Search" className="block py-2 px-3 text-gray-900">
+                <NavLink to="/search" className="block py-2 px-3 text-gray-900">
                   Search
                 </NavLink>
               </li>
