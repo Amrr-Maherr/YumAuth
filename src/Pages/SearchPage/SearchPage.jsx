@@ -69,7 +69,7 @@ export default function SearchPage() {
             )}
           </div>
         </div>
-        <div className="flex items-center justify-between my-5">
+        <div className="flex items-center justify-between flex-wrap my-5">
           {loading && <Loader />}
           {error && (
             <p className="text-center col-span-3 text-red-500 text-lg">
