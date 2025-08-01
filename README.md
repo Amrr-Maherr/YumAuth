@@ -70,6 +70,27 @@ Then open your browser at: [http://localhost:5173](http://localhost:5173)
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](./public/screenshots/home-page.png)
+
+### 🔍 Search / Filter
+![Search Filter](./public/screenshots/search-filter.png)
+
+### 📄 Details Page
+![Details Page](./public/screenshots/details-page.png)
+
+### 📱 login page
+![login page](./public/screenshots/login.png)
+
+### 🧩 Register page
+![Register page](./public/screenshots/register.png)
+
+### ⚙️ recipes
+![recipes](./public/screenshots/recipes.png)
+
+
 ## ✨ Features
 
 - 💾 Browse a collection of delicious recipes.
