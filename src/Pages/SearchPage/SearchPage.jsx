@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../../Components/Footer/Footer";
 import NavBar from "../../Components/NavBar/NavBar";
 import axios from "axios";
-import RecipeCard from "../../Components/RecipeCard/RecipeCard"; // لو عندك الكارت موجود
+import RecipeCard from "../../Components/RecipeCard/RecipeCard";
 import Loader from "../../Components/Loader/Loader";
 import LoadingButton from "../../Components/LoadingButton/LoadingButton";
 
@@ -35,10 +35,9 @@ export default function SearchPage() {
   };
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="p-6 max-w-6xl mx-auto space-y-8">
-        {/* عنوان الصفحة */}
+      <main className="flex-1 p-6 w-full mx-auto space-y-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
             Search Recipes
@@ -55,9 +54,9 @@ export default function SearchPage() {
               className="flex-1 px-4 py-3 rounded-l-full shadow-md border-t border-b border-l focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
             />
             {loading ? (
-              <LoadingButton/>
+              <LoadingButton />
             ) : (
-            <button
+              <button
                 disabled={!SearchValue}
                 onClick={HandelSearch}
                 className={`bg-yellow-400 ${
@@ -76,14 +75,14 @@ export default function SearchPage() {
               Error fetching recipes.
             </p>
           )}
-          {Data.length === 0 ? (
+          {Data.length === 0 && !loading && !error ? (
             <p>No results found.</p>
           ) : (
             Data.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)
           )}
         </div>
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -5,11 +5,11 @@ export default function RecipeRow() {
     console.log(data);
   return (
     <>
-      <div className="flex items-start justify-center flex-wrap">
+      {/* <div className="flex items-start justify-center flex-wrap">
         {data?.map((recipe) => (
           <RecipeCard recipe={recipe} key={recipe.id}/>
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

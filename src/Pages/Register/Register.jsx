@@ -38,8 +38,8 @@ export default function Register() {
 
   return (
     <>
-      <section className="bg-white">
-        <div className="flex items-center justify-around px-6 py-10 mx-auto">
+      <section className="bg-white flex items-center justify-center h-screen">
+        <div className="flex items-center justify-around px-6 py-10 w-full mx-auto">
           <div className="w-full rounded-lg shadow-lg bg-white/30 backdrop-blur-md border border-white/40 md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">

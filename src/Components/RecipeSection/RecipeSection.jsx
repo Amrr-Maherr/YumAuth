@@ -5,7 +5,7 @@ export default function RecipeSection() {
     return (
       <>
         <section className="my-5">
-          <RecipeRow />
+          {/* <RecipeRow /> */}
         </section>
       </>
     );
